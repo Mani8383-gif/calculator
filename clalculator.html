@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="flex justify-center items-center h-screen flex-col">
+        <section class="flex flex-col ">
+            <div class="text-white 
+             h-5 transition-all max-w-30" id="textpush"></div>
+            <div class=" h-20 mb-3 overflow-y-auto max-w-60 text-white" id="textinput">
+
+
+            </div>
+            <main class="flex gap-2">
+
+                <div class="grid grid-cols-3 justify-center items-center gap-2  ">
+                    <button class="text-blue-600 bg-gray-900  transition-all active:bg-gray-950 p-2 rounded-lg"
+                        onclick="cleartext()" id="clear">c</button>
+                    <button class="text-blue-600 bg-gray-900 active:bg-gray-950 transition-all p-2 rounded-lg"
+                        onclick="amaliat('/')">/</button>
+                    <button class="text-blue-600 bg-gray-900 active:bg-gray-950 transition-all p-2 rounded-lg"
+                        onclick="amaliat('*')">*</button>
+                    <button class="bg-gray-900 active:bg-gray-950 transition-all p-4 rounded-lg px-5"
+                        onclick="number('7')">7</button>
+                    <button class="bg-gray-900 active:bg-gray-950 transition-all p-4 rounded-lg px-5"
+                        onclick="number('8')">8</button>
+                    <button class="bg-gray-900 active:bg-gray-950 transition-all p-4 rounded-lg px-5"
+                        onclick="number('9')">9</button>
+                    <button class="bg-gray-900 active:bg-gray-950 transition-all p-4 rounded-lg px-5"
+                        onclick="number('4')">4</button>
+                    <button class="bg-gray-900 active:bg-gray-950 transition-all p-4 rounded-lg px-5"
+                        onclick="number('5')">5</button>
+                    <button class="bg-gray-900 active:bg-gray-950 transition-all p-4 rounded-lg px-5"
+                        onclick="number('6')">6</button>
+                    <button class="bg-gray-900 active:bg-gray-950 transition-all p-4 rounded-lg px-5"
+                        onclick="number('1')">1</button>
+                    <button class="bg-gray-900 active:bg-gray-950 transition-all p-4 rounded-lg px-5"
+                        onclick="number('2')">2</button>
+                    <button class="bg-gray-900 active:bg-gray-950 transition-all p-4 rounded-lg px-5"
+                        onclick="number('3')">3</button>
+                    <button class="bg-gray-900 active:bg-gray-950 transition-all p-4 rounded-lg px-5"
+                        onclick="number('.')">.</button>
+                    <button class="bg-gray-900 active:bg-gray-950 transition-all p-4 rounded-lg px-5"
+                        onclick="number('0')">0</button>
+                    <button class="bg-gray-900 active:bg-gray-950 transition-all p-4 rounded-lg px-5"
+                        onclick="percentnumber('%')">%</button>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <button class="p-2 bg-gray-900 active:bg-gray-950 transition-all rounded-lg "
+                        onclick="deletetext()">delete</button>
+                    <button class="p-4 px-5 bg-gray-900 active:bg-gray-950 transition-all rounded-lg "
+                        onclick="amaliat('-')">-</button>
+                    <button class="p-4 px-5 bg-gray-900 active:bg-gray-950 transition-all rounded-lg "
+                        onclick="amaliat('+')">+</button>
+                    <button class="bg-blue-600 grow active:bg-blue-700 transition-all rounded-lg"
+                        onclick="equal()">=</button>
+                </div>
+            </main>
+        </section>
+    </div>
+    <script src="./calculator.js"></script>
+</body>
+
+</html>
